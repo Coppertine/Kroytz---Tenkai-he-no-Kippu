@@ -59,7 +59,6 @@
     <Compile Include="scriptslibrary/Managers/ForegroundManager.cs" />
     <Compile Include="scriptslibrary/Managers/LyricManager.cs" />
     <Compile Include="scriptslibrary/Managers/ParticleManager.cs" />
-    <Compile Include="scriptslibrary/Managers/SpectrumManager.cs" />
     <Compile Include="scriptslibrary/Managers/TransitionManager.cs" />
     <Compile Include="scriptslibrary/Sections/BackgroundSection.cs" />
     <Compile Include="scriptslibrary/Sections/CreditSection.cs" />
@@ -67,7 +66,6 @@
     <Compile Include="scriptslibrary/Sections/ForegroundSection.cs" />
     <Compile Include="scriptslibrary/Sections/LyricSection.cs" />
     <Compile Include="scriptslibrary/Sections/ParticleSection.cs" />
-    <Compile Include="scriptslibrary/Sections/SpectrumSection.cs" />
     <Compile Include="scriptslibrary/Sections/TransitionSection.cs" />
     <Compile Include="scriptslibrary/System/Enums.cs" />
     <Compile Include="scriptslibrary/System/Generator.cs" />

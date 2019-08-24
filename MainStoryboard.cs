@@ -43,7 +43,6 @@ namespace StorybrewScripts
             Locator.Register<ExampleManager>(new ExampleManager());
             Locator.Register<ParticleManager>(new ParticleManager());
             Locator.Register<CreditManager>(new CreditManager());
-            Locator.Register<SpectrumManager>(new SpectrumManager());
             Locator.Register<ForegroundManager>(new ForegroundManager());
             Locator.Register<LyricManager>(new LyricManager());
             Locator.Register<TransitionManager>(new TransitionManager());
@@ -55,7 +54,7 @@ namespace StorybrewScripts
                 new ExampleSection(),
                 new ParticleSection(),
                 new CreditSection(),
-                new SpectrumSection(),
+                
                 new LyricSection(),
                 new ForegroundSection(),
                 new TransitionSection(),

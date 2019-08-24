@@ -1,0 +1,40 @@
+﻿FormatVersion: 6
+Name: "MainStoryboard"
+Script: "MainStoryboard"
+Config:
+  Refresh:
+    Type: "System.Boolean"
+    Value: "True"
+  CopySprites:
+    Type: "System.Boolean"
+    Value: "True"
+  RandomSeed:
+    Type: "System.Int32"
+    Value: "0"
+    DisplayName: "Random seed"
+Layers:
+  291a56994191441b97dac5ea877b3cbd:
+    Name: "HitobjectBackground"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  1c0f5221f2094b018d6c00db77cc0236:
+    Name: "Hitobject"
+    OsbLayer: Foreground
+    DiffSpecific: No
+    Visible: Yes
+  075f9ee774ef4a4a8ff7a68d746e81d6:
+    Name: "Foreground"
+    OsbLayer: Foreground
+    DiffSpecific: No
+    Visible: Yes
+  8038a561f9034ea0b7d1b06114d96d46:
+    Name: "Overlay"
+    OsbLayer: Overlay
+    DiffSpecific: No
+    Visible: Yes
+  4916152eee5a4c3ba82b7d48ef0d8cca:
+    Name: "OverlayHitobject"
+    OsbLayer: Overlay
+    DiffSpecific: No
+    Visible: Yes

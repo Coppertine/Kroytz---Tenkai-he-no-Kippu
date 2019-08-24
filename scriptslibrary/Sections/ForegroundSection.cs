@@ -9,14 +9,14 @@ public class ForegroundSection : Section
         var manager = GetManager<ForegroundManager>();
         manager.generateSprites();
 
-        manager.LetterboxFade(11784, 1);
-        manager.LetterboxFade(22755, 0);
-        manager.LetterboxScale(11784, 80);
-        manager.LetterboxScale(OsbEasing.InOutCubic, 22070, 22412, 80, 240);
-        manager.LetterboxColor(11784,Color4.Black);
+        manager.LetterboxFade(17890, 1);
+        manager.LetterboxFade(28074, 0);
+        manager.LetterboxScale(OsbEasing.InOutCubic, 17890, 18206, 0, 80);
+        manager.LetterboxScale(OsbEasing.InOutCubic, 26811, 28074, 80, 240);
+        manager.LetterboxColor(17890,Color4.Black);
 
-        manager.vigenetteFade(812, 0.8);
-        manager.vigenetteFade(11784, 12212, 0.8, 0);
+        manager.vigenetteFade(284, 0.8);
+        manager.vigenetteFade(10074, 10390, 0.8, 0);
 
         
     }

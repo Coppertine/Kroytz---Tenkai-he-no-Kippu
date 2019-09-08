@@ -41,6 +41,9 @@ public abstract class Generator
     public double Random(double minValue, double maxValue) => MainStoryboard.Instance.Random(minValue, maxValue);
     public double Random(double maxValue) => MainStoryboard.Instance.Random(maxValue);
 
+    public float Random(float minValue, double maxValue) => (float)MainStoryboard.Instance.Random(minValue, maxValue);
+    public float Random(float maxValue) => (float)MainStoryboard.Instance.Random(maxValue);
+
         
     public int GetBeatDuration(int startTime, double divisor)
     {
@@ -83,7 +86,7 @@ public abstract class Generator
         return value;
     }
 
-    
+    public double DegreesToRadians(double degree) => (Math.PI / 180) * degree;    
 
     public class Lyric {
 
@@ -153,6 +156,24 @@ public abstract class Generator
 
         public bool randomX{get; set;}
         public bool randomY{get; set;}
+
+        public Vector2? scale {
+            get { return scale ?? new Vector2(); } 
+            set { scale = value; }
+        }        
+        public bool? randomScale {
+            get { return randomScale ?? false; } 
+            set { randomScale = value; } 
+        }
+
+        public Vector2? rotation {
+            get { return rotation ?? new Vector2(0,0); } 
+            set { rotation = value; }
+        }        
+        public bool? randomRotation {
+            get { return randomRotation ?? false; } 
+            set { randomRotation = value; } 
+        }
 
         public ParticleParamaters(
             double start, 

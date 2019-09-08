@@ -136,7 +136,9 @@ public class ParticleSection : Section
             duration = GetBeatDuration(28074,1) * 4,
             particleAmmount = 16,
             randomX = true,
-            randomY = false
+            randomY = false,
+            rotation = new Vector2(0,360),
+            randomRotation = true
         });
 
         // 149337 (Slowish section to kiai 2)
@@ -153,7 +155,9 @@ public class ParticleSection : Section
             duration = GetBeatDuration(28074, 1) * 3,
             particleAmmount = 16,
             randomX = false,
-            randomY = true
+            randomY = true,
+            rotation = new Vector2(0,360),
+            randomRotation = true
         });
     }
 }

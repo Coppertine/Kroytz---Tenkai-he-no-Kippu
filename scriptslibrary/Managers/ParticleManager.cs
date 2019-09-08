@@ -5,6 +5,8 @@ using StorybrewCommon.Storyboarding.Util;
 using System;
 using System.Collections.Generic;
 using StorybrewCommon.Mapset;
+using System.Linq;
+using OpenTK;
 public class ParticleManager : Manager
 {
     
@@ -116,6 +118,24 @@ public class ParticleManager : Manager
                     startX, startY, endX, endY);
                 sprite.Fade(time, 1);
                 sprite.Fade(particleEndTime, 0);
+
+                if (paramaters.randomRotation == false)
+                {
+                    sprite.Rotate(paramaters.easing,
+                        time, particleEndTime, 
+                        DegreesToRadians(
+                            Random(((Vector2)paramaters.rotation).X, ((Vector2)paramaters.rotation).Y)), 
+                        DegreesToRadians(
+                            Random(((Vector2)paramaters.rotation).X, ((Vector2)paramaters.rotation).Y)));
+                }
+                else
+                { 
+                    sprite.Rotate(
+                        paramaters.easing,
+                        time, particleEndTime,
+                        DegreesToRadians(((Vector2)paramaters.rotation).X), 
+                        DegreesToRadians(((Vector2)paramaters.rotation).Y));
+                }
 
                 //  if(Random(0, 4) > 0) //HACK move the time back in order to increase the particle count without running into syncing issues
                 //           time -= GetBeatDuration((int)time, 2);

@@ -18,15 +18,15 @@ public class CreditManager : Manager
 
         CreateCredit(GetLayer(Layers.Foreground), 129127, 131653, "天界への切符", "Dragon Guardian");
         CreateCredit(GetLayer(Layers.HitobjectBackground), 131653, 134179, GetMapDiff()[0], GetMapDiff()[1]);
-        CreateCredit(GetLayer(Layers.Foreground), 134179, 137969, "Storyboard", "Coppertine");
+        CreateCredit(GetLayer(Layers.Foreground), 134179, 137969, "Storyboard", "Coppertine | TheDuckMask");
         
     }
 
     public void CreateLine()
     {
         var bar = GetLayer(Layers.Foreground).CreateSprite("sb/pixel.png");
-        bar.ScaleVec(OsbEasing.OutExpo, 129127, 129521, new Vector2(0,5), new Vector2(450,5));
-        bar.ScaleVec(OsbEasing.OutExpo, 137653, 137969, new Vector2(450,5), new Vector2(0,5));
+        bar.ScaleVec(OsbEasing.OutExpo, 129127, 129521, new Vector2(0,1), new Vector2(450,1));
+        bar.ScaleVec(OsbEasing.OutExpo, 137653, 137969, new Vector2(450,1), new Vector2(0,1));
         bar.Fade(129127,1);
         bar.Fade(137969,0);
         bar.Color(129127,Color4.White);
@@ -39,6 +39,7 @@ public class CreditManager : Manager
 
         // Top Sprite //
         var topSprite = layer.CreateSprite(font.GetTexture(topString).Path);
+        
         topSprite.MoveY(startTime,240 - (font.GetTexture(topString).BaseHeight * 0.55) * 0.7);
         topSprite.Fade(startTime, startTime + 250, 0, 1);
         topSprite.Fade(endTime - 250, endTime, 1,0);
@@ -65,7 +66,7 @@ public class CreditManager : Manager
         font = LoadFont("sb/f/c", new FontDescription(){
             FontPath = "fonts/Montserrat-Light.ttf",
             FontSize = 38,
-          
+          Color = Color4.White
         });
 
         string[] creditList = {

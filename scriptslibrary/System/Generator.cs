@@ -4,6 +4,16 @@ using StorybrewScripts;
 using System;
 using StorybrewCommon.Subtitles;
 using Newtonsoft.Json;
+using StorybrewCommon.Animations;
+using StorybrewCommon.Mapset;
+using StorybrewCommon.Subtitles.Parsers;
+using StorybrewCommon.Util;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
+using System.Globalization;
+using System.IO;
+
 
 public abstract class Generator
 {
@@ -43,6 +53,20 @@ public abstract class Generator
     public float[] GetFft(double time, string path = null) => MainStoryboard.Instance.GetFft(time,path);
     public float[] GetFft(double time, int magnitudes, string path = null, OsbEasing easing = OsbEasing.None) => MainStoryboard.Instance.GetFft(time,magnitudes,path,easing);
 
+    /// <summary>
+    /// Opens a project file in read-only mode. 
+    /// You are responsible for disposing it.
+    /// </summary>
+    public Stream OpenProjectFile(string path, bool watch = true)
+        => MainStoryboard.Instance.OpenProjectFile(path, watch);
+
+    /// <summary>
+    /// Opens a mapset file in read-only mode. 
+    /// You are responsible for disposing it.
+    /// </summary>
+    public Stream OpenMapsetFile(string path, bool watch = true)
+        => MainStoryboard.Instance.OpenMapsetFile(path, watch);
+    
     public bool InTime(int TimeOne, int TimeTwo, int offset)
     {   
         
@@ -58,6 +82,8 @@ public abstract class Generator
        
         return value;
     }
+
+    
 
     public class Lyric {
 
@@ -112,4 +138,66 @@ public abstract class Generator
                 return "";
         }
     }
+
+    public struct ParticleParamaters {
+        public ParticleDirection direction {get; set;}
+
+        public Vector2Range Positions{get; set;}
+        public OsbEasing easing{get; set;}
+        public double duration{get; set;}
+
+        public int particleAmmount{get; set;}
+
+        public double startTime{get; set;}
+        public double endTime{get; set;}
+
+        public bool randomX{get; set;}
+        public bool randomY{get; set;}
+
+        public ParticleParamaters(
+            double start, 
+            double end,
+            ParticleDirection particleDir, 
+            Vector2Range pos, OsbEasing ease, 
+            double dur, int partAmmount,
+            bool randX = false, bool randY = true
+            )
+        {
+            this.direction = particleDir;
+            this.Positions = pos;
+            this.easing = ease;
+            this.duration = dur;
+            this.particleAmmount = partAmmount;
+            this.randomX = randX;
+            this.randomY = randY;
+            this.startTime = start;
+            this.endTime = end;
+
+        }
+
+    }
+
+    public class Vector2Range {
+        public Vector2 from;
+        public Vector2 to;
+
+        public Vector2Range(Vector2 inputFrom, Vector2 inputTo)
+        {
+            from = inputFrom;
+            to = inputTo;
+        }
+    }
+
+    public class intRange {
+        public int from;
+        public int to;
+
+        public intRange(int inputFrom, int inputTo)
+        {
+            from = inputFrom;
+            to = inputTo;
+        }
+    }
+
+    
 }

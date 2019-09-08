@@ -52,12 +52,15 @@
   </Target>
   -->
   <ItemGroup>
+    <Compile Include="ImportOsb.cs" />
     <Compile Include="MainStoryboard.cs" />
+    <Compile Include="Particles.cs" />
     <Compile Include="scriptslibrary/Managers/BackgroundManager.cs" />
     <Compile Include="scriptslibrary/Managers/CreditManager.cs" />
     <Compile Include="scriptslibrary/Managers/ExempleManager.cs" />
     <Compile Include="scriptslibrary/Managers/ForegroundManager.cs" />
     <Compile Include="scriptslibrary/Managers/LyricManager.cs" />
+    <Compile Include="scriptslibrary/Managers/OsbManager.cs" />
     <Compile Include="scriptslibrary/Managers/ParticleManager.cs" />
     <Compile Include="scriptslibrary/Managers/TransitionManager.cs" />
     <Compile Include="scriptslibrary/Sections/BackgroundSection.cs" />
@@ -65,6 +68,7 @@
     <Compile Include="scriptslibrary/Sections/ExempleSection.cs" />
     <Compile Include="scriptslibrary/Sections/ForegroundSection.cs" />
     <Compile Include="scriptslibrary/Sections/LyricSection.cs" />
+    <Compile Include="scriptslibrary/Sections/OsbSection.cs" />
     <Compile Include="scriptslibrary/Sections/ParticleSection.cs" />
     <Compile Include="scriptslibrary/Sections/TransitionSection.cs" />
     <Compile Include="scriptslibrary/System/Enums.cs" />
@@ -73,6 +77,7 @@
     <Compile Include="scriptslibrary/System/ManagerLocator.cs" />
     <Compile Include="scriptslibrary/System/Section.cs" />
     <Compile Include="scriptslibrary/System/StoryboardFiles.cs" />
+    <Compile Include="scriptslibrary/System/StreamReaderExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

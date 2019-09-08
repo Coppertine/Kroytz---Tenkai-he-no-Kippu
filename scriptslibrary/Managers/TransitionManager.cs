@@ -58,4 +58,12 @@ public class TransitionManager : Manager
     {
         return layer.CreateAnimation("sb/ani/tri/Triangle.png",21,frameduration,OsbLoopType.LoopOnce);
     }
+
+    public OsbSprite BackgroundOverlayPopup(StoryboardLayer layer, string file)
+    {
+        var sprite = layer.CreateSprite(file);
+        sprite.Scale(0,854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width);
+        sprite.Fade(0,0);
+        return sprite;
+    }
 }

@@ -4,6 +4,7 @@ using StorybrewScripts;
 using StorybrewCommon.Storyboarding.Util;
 using System;
 using System.Collections.Generic;
+using StorybrewCommon.Mapset;
 public class ParticleManager : Manager
 {
     
@@ -87,7 +88,41 @@ public class ParticleManager : Manager
         return new OsbSpritePool(GetLayer(layers), fileName, OsbOrigin.Centre, Additive);
     }
 
-    
+    public void CustomParticles(OsbSpritePool pool, ParticleParamaters paramaters) {
+        using(pool) 
+        {
+            var timeStep = paramaters.duration / paramaters.particleAmmount;
+            for (double time = paramaters.startTime; time <= paramaters.endTime; time += timeStep)
+            {
+               
+                var particleEndTime = time + paramaters.duration;
+                var sprite = pool.Get(time, particleEndTime);
+                var startX = paramaters.randomX ?
+                    Random(paramaters.Positions.from.X, paramaters.Positions.to.X)
+                        : paramaters.Positions.from.X;
+                var startY = paramaters.randomY ?
+                    Random(paramaters.Positions.from.Y, paramaters.Positions.to.Y)
+                        : paramaters.Positions.from.Y;
+
+                var endX = paramaters.randomX ?
+                    Random(paramaters.Positions.from.X, paramaters.Positions.to.X)
+                        : paramaters.Positions.to.X;
+                var endY = paramaters.randomY ?
+                    Random(paramaters.Positions.from.Y, paramaters.Positions.to.Y)
+                        : paramaters.Positions.to.Y;
+
+                sprite.Move(paramaters.easing, 
+                    time, particleEndTime, 
+                    startX, startY, endX, endY);
+                sprite.Fade(time, 1);
+                sprite.Fade(particleEndTime, 0);
+
+                //  if(Random(0, 4) > 0) //HACK move the time back in order to increase the particle count without running into syncing issues
+                //           time -= GetBeatDuration((int)time, 2);
+
+            }
+        }
+    }
 
     #region Hitobject Particles
     
@@ -114,9 +149,13 @@ public class ParticleManager : Manager
                             GetBeatDuration((int)hitobject.StartTime, 1) + 
                             (GetBeatDuration((int)hitobject.StartTime,4) * 3));
                         
-                        sprite.Scale(OsbEasing.OutExpo,hitobject.StartTime, hitobject.StartTime + 950, sizeStart, sizeEnd);
+                        sprite.Scale(OsbEasing.OutExpo,hitobject.StartTime, hitobject.EndTime + 
+                            GetBeatDuration((int)hitobject.StartTime, 1) + 
+                            (GetBeatDuration((int)hitobject.StartTime,4) * 3), sizeStart, sizeEnd);
                         
-                        sprite.Fade(hitobject.StartTime, hitobject.StartTime + 950, 1, 0);
+                        sprite.Fade(hitobject.StartTime, hitobject.EndTime + 
+                            GetBeatDuration((int)hitobject.StartTime, 1) + 
+                            (GetBeatDuration((int)hitobject.StartTime,4) * 3), 1, 0);
                         sprite.Move(hitobject.StartTime,hitobject.Position);
                     }
                 }
@@ -140,6 +179,46 @@ public class ParticleManager : Manager
                     sprite.Move(hitobject.StartTime,hitobject.Position);
                 }
                 
+            }
+        }
+    }
+    
+    public OsbSpritePool hitlightpool(Layers layers, string file) {
+        return new OsbSpritePool(GetLayer(layers), file, OsbOrigin.Centre, (sprite, startTime, endTime) =>
+        {});
+    }
+
+    public void Hitlight(OsbSpritePool pool, List<intRange> ranges)
+    {
+        using(pool)
+        {
+            foreach(var hitobject in MainStoryboard.Instance.Beatmap.HitObjects)
+            {
+                foreach(var range in ranges)
+                {
+                    if(InTime((int)hitobject.StartTime, range.from, range.to, 5) ||
+                       InTime((int)hitobject.EndTime, range.from, range.to, 5))
+                    {
+                        var sprite = pool.Get(hitobject.StartTime - 100, hitobject.EndTime + 200);
+                        sprite.Color(hitobject.StartTime - 100, hitobject.Color);
+                        sprite.Fade(hitobject.StartTime - 100, hitobject.EndTime + 200, 1, 0);
+                        sprite.Scale(hitobject.StartTime - 100, hitobject.StartTime, 0, 0.25);
+                        sprite.Move(hitobject.StartTime - 100, hitobject.Position);
+                        if(hitobject is OsuSlider)
+                        {
+                            
+                            for(var i = hitobject.StartTime; i < hitobject.EndTime; i += GetBeatDuration((int)hitobject.StartTime, 4))
+                            {
+                                sprite.Move(
+                                    i,
+                                    i + GetBeatDuration((int)i, 4),
+                                    hitobject.PositionAtTime(i), 
+                                    hitobject.PositionAtTime(i + GetBeatDuration((int)i, 4))
+                                );
+                            }
+                        }
+                    }
+                }
             }
         }
     }

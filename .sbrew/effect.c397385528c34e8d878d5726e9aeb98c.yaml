@@ -4,13 +4,13 @@ Script: "MainStoryboard"
 Config:
   Refresh:
     Type: "System.Boolean"
-    Value: "True"
+    Value: "False"
   CopySprites:
     Type: "System.Boolean"
     Value: "True"
   RandomSeed:
     Type: "System.Int32"
-    Value: "0"
+    Value: "6666"
     DisplayName: "Random seed"
 Layers:
   291a56994191441b97dac5ea877b3cbd:
@@ -18,13 +18,13 @@ Layers:
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes
-  1c0f5221f2094b018d6c00db77cc0236:
-    Name: "Hitobject"
+  075f9ee774ef4a4a8ff7a68d746e81d6:
+    Name: "Foreground"
     OsbLayer: Foreground
     DiffSpecific: No
     Visible: Yes
-  075f9ee774ef4a4a8ff7a68d746e81d6:
-    Name: "Foreground"
+  1c0f5221f2094b018d6c00db77cc0236:
+    Name: "Hitobject"
     OsbLayer: Foreground
     DiffSpecific: No
     Visible: Yes

@@ -46,6 +46,7 @@ namespace StorybrewScripts
             Locator.Register<ForegroundManager>(new ForegroundManager());
             Locator.Register<LyricManager>(new LyricManager());
             Locator.Register<TransitionManager>(new TransitionManager());
+            Locator.Register<OsbManager>(new OsbManager());
             
             //INSTANCIATE YOUR SECTIONS IN THIS ARRAY//
             Section[] instanciatedSections =
@@ -53,9 +54,8 @@ namespace StorybrewScripts
                 new BackgroundSection(),
                 new ExampleSection(),
                 new ParticleSection(),
-                new CreditSection(),
-                
-                new LyricSection(),
+                new CreditSection(),                
+                new OsbSection(),
                 new ForegroundSection(),
                 new TransitionSection(),
                 

@@ -123,41 +123,61 @@ public class ParticleSection : Section
            OsbOrigin.Centre
        );
     // First verse
-       particleManager.CustomParticles(foreGroundFeathers,
-        new ParticleParamaters {
-            startTime = 28074,
-            endTime = 47969,
-            direction = ParticleDirection.Bottom,
-            Positions = new Vector2Range(
-                new Vector2(-110, -50), // Top Left
-                new Vector2(780, 500)   // Bottom Right
-            ),
-            easing = OsbEasing.None,
-            duration = GetBeatDuration(28074,1) * 4,
-            particleAmmount = 16,
-            randomX = true,
-            randomY = false,
-            rotation = new Vector2(0,360),
-            randomRotation = true
-        });
-
-        // 149337 (Slowish section to kiai 2)
         particleManager.CustomParticles(foreGroundFeathers,
-        new ParticleParamaters {
-            startTime = 149337,
-            endTime = 164495,
-            direction = ParticleDirection.Bottom,
-            Positions = new Vector2Range(
-                new Vector2(-110, 100), // Top Left
-                new Vector2(780, 500)   // Bottom Right
-            ),
-            easing = OsbEasing.None,
-            duration = GetBeatDuration(28074, 1) * 3,
-            particleAmmount = 16,
-            randomX = false,
-            randomY = true,
-            rotation = new Vector2(0,360),
-            randomRotation = true
-        });
+         new ParticleParamaters {
+             startTime = 28074,
+             endTime = 47969,
+             direction = ParticleDirection.Bottom,
+             Positions = new Vector2Range(
+                 new Vector2(-110, -50), // Top Left
+                 new Vector2(780, 500)   // Bottom Right
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074,1) * 4,
+             particleAmmount = 16,
+             randomX = true,
+             randomY = false,
+             rotation = new Vector2(1,360),
+             randomRotation = true
+         });
+
+         // 149337 (Slowish section to kiai 2)
+         particleManager.CustomParticles(foreGroundFeathers,
+         new ParticleParamaters {
+             startTime = 149337,
+             endTime = 164495,
+             direction = ParticleDirection.Bottom,
+             Positions = new Vector2Range(
+                 new Vector2(-110, 100), // Top Left
+                 new Vector2(780, 500)   // Bottom Right
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074, 1) * 3,
+             particleAmmount = 16,
+             randomX = false,
+             randomY = true,
+             rotation = new Vector2(0,360),
+             randomRotation = true
+         });
+
+
+         // (Fast kiai 2)
+         particleManager.CustomParticles(foreGroundFeathers,
+         new ParticleParamaters {
+             startTime = 169548,
+             endTime = 209969,
+             direction = ParticleDirection.Bottom,
+             Positions = new Vector2Range(
+                 new Vector2(-110, 100), // Top Left
+                 new Vector2(780, 500)   // Bottom Right
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074, 1) * 1.5,
+             particleAmmount = 16,
+             randomX = false,
+             randomY = true,
+             rotation = new Vector2(0,360),
+             randomRotation = true
+         });
     }
 }

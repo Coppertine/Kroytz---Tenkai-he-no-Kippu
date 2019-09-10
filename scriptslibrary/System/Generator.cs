@@ -145,35 +145,23 @@ public abstract class Generator
     public struct ParticleParamaters {
         public ParticleDirection direction {get; set;}
 
-        public Vector2Range Positions{get; set;}
-        public OsbEasing easing{get; set;}
-        public double duration{get; set;}
+        public Vector2Range Positions {get; set;}
+        public OsbEasing easing {get; set;}
+        public double duration {get; set;}
 
-        public int particleAmmount{get; set;}
+        public int particleAmmount {get; set;}
 
-        public double startTime{get; set;}
-        public double endTime{get; set;}
+        public double startTime {get; set;}
+        public double endTime {get; set;}
 
-        public bool randomX{get; set;}
-        public bool randomY{get; set;}
+        public bool randomX {get; set;}
+        public bool randomY {get; set;}
 
-        public Vector2? scale {
-            get { return scale ?? new Vector2(); } 
-            set { scale = value; }
-        }        
-        public bool? randomScale {
-            get { return randomScale ?? false; } 
-            set { randomScale = value; } 
-        }
+        public Vector2 scale {get; set;}   
+        public bool randomScale {get; set;}
 
-        public Vector2? rotation {
-            get { return rotation ?? new Vector2(0,0); } 
-            set { rotation = value; }
-        }        
-        public bool? randomRotation {
-            get { return randomRotation ?? false; } 
-            set { randomRotation = value; } 
-        }
+        public Vector2 rotation {get; set;}
+        public bool randomRotation {get; set;}
 
         public ParticleParamaters(
             double start, 
@@ -181,7 +169,9 @@ public abstract class Generator
             ParticleDirection particleDir, 
             Vector2Range pos, OsbEasing ease, 
             double dur, int partAmmount,
-            bool randX = false, bool randY = true
+            bool randX = false, bool randY = true,
+            Vector2? scale = null, bool randomScale = false,
+            Vector2? rotation = null, bool randomRotation = false
             )
         {
             this.direction = particleDir;
@@ -193,6 +183,10 @@ public abstract class Generator
             this.randomY = randY;
             this.startTime = start;
             this.endTime = end;
+            this.scale = ((Vector2)scale).Equals(null) ? (Vector2)scale : new Vector2(1,1); 
+            this.rotation = ((Vector2)rotation).Equals(null) ? (Vector2)rotation : new Vector2(0,0); 
+            this.randomRotation = randomRotation;
+            this.randomScale = randomScale;
 
         }
 

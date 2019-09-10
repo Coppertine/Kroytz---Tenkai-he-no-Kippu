@@ -119,9 +119,10 @@ public class ParticleManager : Manager
                 sprite.Fade(time, 1);
                 sprite.Fade(particleEndTime, 0);
 
-                if (paramaters.randomRotation == false)
+                if ((bool)paramaters.randomRotation == true)
                 {
-                    sprite.Rotate(paramaters.easing,
+                    sprite.Rotate(
+                        paramaters.easing,
                         time, particleEndTime, 
                         DegreesToRadians(
                             Random(((Vector2)paramaters.rotation).X, ((Vector2)paramaters.rotation).Y)), 

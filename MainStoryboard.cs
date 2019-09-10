@@ -32,7 +32,7 @@ namespace StorybrewScripts
         private StoryboardFiles storyboardFiles = new StoryboardFiles();
         private DirectoryInfo mapsetDirectory, projectDirectory;
         [Configurable] public bool Refresh;
-        [Configurable] public bool CopySprites = true;
+        [Configurable] public bool CopySprites = false;
         public override void Generate()
         {
             _instance = this;

@@ -5,25 +5,30 @@ public class BackgroundSection : Section
     {
         var backgroundManager = GetManager<BackgroundManager>();
         backgroundManager.RemoveBackgrounds();
-        backgroundManager.SetupBackgrounds();
+        
+        // Set up Backgrounds //
+        var normalBG = backgroundManager.GetBackgroundSprite(BackgroundType.Normal);
+        var blurBG = backgroundManager.GetBackgroundSprite(BackgroundType.Blur);
+        var warBG = backgroundManager.GetBackgroundSprite(BackgroundType.War);
+        var sunsetBG = backgroundManager.GetBackgroundSprite(BackgroundType.Sunset);
 
         //  Intro  //
-        backgroundManager.FadeRegular(284, 0.8);
-        backgroundManager.FadeRegular(17732, 17969, 0.8, 0);
-        backgroundManager.FadeBlur(17732, 17969, 0, 0.8);
+        normalBG.Fade(284, 0.8);
+        normalBG.Fade(17732, 17969, 0.8, 0);
+        blurBG.Fade(17732, 17969, 0, 0.8);
 
        // Verse 1 //
-       backgroundManager.FadeBlur(28074,0);
-        backgroundManager.FadeRegular(28074, 0.7);
-        backgroundManager.FadeRegular(48284, 0);
+        blurBG.Fade(28074,0);
+        normalBG.Fade(28074, 0.7);
+        normalBG.Fade(48284, 0);
 
         // Kiai 1 //
-        // backgroundManager.FadeRegular(44698, 0.85);
-        // backgroundManager.FadeRegular(66641, 0);
+         //normalBG.Fade(44698, 0.85);
+        //normalBG.Fade(66641, 0);
 
 
         // Credits //
-        backgroundManager.FadeBlur(129127, 0.8);
-        backgroundManager.FadeBlur(148074,0);
+        blurBG.Fade(129127, 0.8);
+        blurBG.Fade(148074,0);
     }
 }

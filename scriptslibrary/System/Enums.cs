@@ -32,7 +32,9 @@ public enum ParticleDirection
 public enum BackgroundType
 {
     Blur,
-    Normal
+    Normal,
+    War,
+    Sunset
 }
 
 public enum LyricFont

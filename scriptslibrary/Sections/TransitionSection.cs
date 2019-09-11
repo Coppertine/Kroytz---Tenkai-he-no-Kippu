@@ -23,6 +23,8 @@ public class TransitionSection : Section
         // Setup
         var flash = transitionManager.FullscreenFlash(GetLayer(Layers.OverlayHitobject),"sb/pixel.png");
         var bgFlash = transitionManager.BackgroundOverlayPopup(GetLayer(Layers.OverlayHitobject), "BG.jpg");
+        var bgWarFlash = transitionManager.BackgroundOverlayPopup(GetLayer(Layers.OverlayHitobject),"sb/bg/red.jpg");
+
 
         // Intro //
         bgFlash.Fade(10390, 10784, 0.7, 0);
@@ -34,8 +36,7 @@ public class TransitionSection : Section
         flash.Fade(28074, 28627, 1, 0);
 
         //  //
-        //flash.Fade(22755, 23384, 1, 0);
-
+        
         
     
     

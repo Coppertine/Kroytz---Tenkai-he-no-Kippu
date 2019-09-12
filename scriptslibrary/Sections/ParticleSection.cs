@@ -141,6 +141,45 @@ public class ParticleSection : Section
              randomRotation = true
          });
 
+         // 68495 (Sloish Section to Kiai 1)
+         particleManager.CustomParticles(foreGroundFeathers,
+         new ParticleParamaters {
+             startTime = 68495,
+             endTime = 83653,
+             direction = ParticleDirection.Bottom,
+             Positions = new Vector2Range(
+                 new Vector2(-110, 100), // Top Left
+                 new Vector2(780, 500)   // Bottom Right
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074, 1) * 3,
+             particleAmmount = 16,
+             randomX = false,
+             randomY = true,
+             rotation = new Vector2(0,360),
+             randomRotation = true
+         });
+
+         // 88706 (Fast Kiai 1)
+        particleManager.CustomParticles(foreGroundFeathers,
+         new ParticleParamaters {
+             startTime = 88706,
+             endTime = 129127,
+             direction = ParticleDirection.Bottom,
+             Positions = new Vector2Range(
+                 new Vector2(-110, 100), // Top Left
+                 new Vector2(780, 500)   // Bottom Right
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074, 1) * 1.5,
+             particleAmmount = 16,
+             randomX = false,
+             randomY = true,
+             rotation = new Vector2(0,360),
+             randomRotation = true
+         });
+
+
          // 149337 (Slowish section to kiai 2)
          particleManager.CustomParticles(foreGroundFeathers,
          new ParticleParamaters {

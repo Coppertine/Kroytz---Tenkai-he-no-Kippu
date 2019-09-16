@@ -58,7 +58,18 @@ public class TransitionSection : Section
         bgWarFlash.Scale(OsbEasing.OutCubic, 88706, 88942, 
         (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
         (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
-    
-    
+
+
+        // 209969
+        bgSunsetFlash.Fade(209969, 210206, 0.7, 0);
+        bgSunsetFlash.Scale(209969, 210206, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
+
+        // 220074
+        bgSunsetFlash.Fade(220074, 220311, 0.7, 0);
+        bgSunsetFlash.Scale(220074, 220311, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
     }
 }

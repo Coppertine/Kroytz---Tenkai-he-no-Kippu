@@ -179,6 +179,22 @@ public class ParticleManager : Manager
                             (GetBeatDuration((int)hitobject.StartTime,4) * 3), 1, 0);
                         sprite.Move(hitobject.StartTime,hitobject.Position);
                     }
+                    else if(InTime((int)hitobject.EndTime, time, 5)) {
+                        var sprite = pool.Get(
+                            hitobject.EndTime, 
+                            hitobject.EndTime + 
+                            GetBeatDuration((int)hitobject.StartTime, 1) + 
+                            (GetBeatDuration((int)hitobject.StartTime,4) * 3));
+                        
+                        sprite.Scale(OsbEasing.OutExpo,hitobject.EndTime, hitobject.EndTime + 
+                            GetBeatDuration((int)hitobject.EndTime, 1) + 
+                            (GetBeatDuration((int)hitobject.EndTime,4) * 3), sizeStart, sizeEnd);
+                        
+                        sprite.Fade(hitobject.EndTime, hitobject.EndTime + 
+                            GetBeatDuration((int)hitobject.EndTime, 1) + 
+                            (GetBeatDuration((int)hitobject.EndTime,4) * 3), 1, 0);
+                        sprite.Move(hitobject.EndTime,hitobject.EndPosition);
+                    }
                 }
             }
         }

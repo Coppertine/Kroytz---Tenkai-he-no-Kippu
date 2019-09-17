@@ -69,4 +69,12 @@ public class ForegroundManager : Manager
         Letterbox[0].Fade(start,opa);
         Letterbox[1].Fade(start,opa);
     }
+
+    public OsbSprite FlareSprite(string filePath) 
+    {
+        OsbSprite sprite = GetLayer(Layers.Overlay).CreateSprite(filePath);
+        sprite.Scale(0,1);
+        sprite.Fade(0,0);
+        return sprite;
+    }
 }

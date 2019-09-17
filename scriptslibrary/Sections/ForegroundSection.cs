@@ -31,6 +31,13 @@ public class ForegroundSection : Section
         manager.vigenetteFade(58390, 58627, 0.8, 0);
         manager.vigenetteFade(209969, 0.6);
         manager.vigenetteFade(220074, 220271, 0.6, 0);
+
+        // Flares //
+        var sunsetFlare = manager.FlareSprite("sb/sunsetFlare.png");
+        var warFlare = manager.FlareSprite("sb/warFlare.png");
+
+
+        
         
     }
 }

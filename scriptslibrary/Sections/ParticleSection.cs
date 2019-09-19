@@ -281,8 +281,7 @@ public class ParticleSection : Section
             new intRange(244074, 245337),
             new intRange(284495, 285758), // Kiai 3
             new intRange(289548, 290811),
-            new intRange(292232, 293337), // Ending
-            new intRange(308574, 310706)
+            new intRange(292232, 310706), // Ending
 
 
         };

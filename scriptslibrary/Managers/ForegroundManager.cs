@@ -72,7 +72,7 @@ public class ForegroundManager : Manager
 
     public OsbSprite FlareSprite(string filePath) 
     {
-        OsbSprite sprite = GetLayer(Layers.Overlay).CreateSprite(filePath);
+        OsbSprite sprite = GetLayer(Layers.Overlay).CreateSprite(filePath, OsbOrigin.TopCentre);
         sprite.Scale(0,1);
         sprite.Fade(0,0);
         return sprite;

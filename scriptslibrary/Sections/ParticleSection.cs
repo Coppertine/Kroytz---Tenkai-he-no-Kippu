@@ -184,7 +184,81 @@ public class ParticleSection : Section
             208074,
             208706,
             209969, // Bridge (sunset)
-            
+            220074,
+            222600,
+            225127,
+            225442,
+            225758,
+            226074,
+            226390,
+            226706,
+            227653,
+            227969,
+            228285,
+            228600,
+            229863,
+            230179, // After Bridge
+            232706,
+            233021,
+            233337,
+            233653,
+            237758,
+            238074,
+            238390,
+            238706,
+            240285,
+            242179,
+            242811,
+            244074,
+            245337,
+            247390,
+            247863,
+            248495,
+            249127,
+            247232,
+            250074,
+            250390, // Kiai 3
+            252285,
+            252916,
+            254811,
+            255442,
+            257337,
+            257969,
+            260495,
+            262390,
+            263021,
+            264285,
+            265548,
+            267442,
+            268074,
+            269337,
+            270600,
+            272495,
+            273127,
+            275021,
+            275653,
+            277548,
+            278179,
+            280706,
+            282600,
+            283232,
+            284495,
+            285758,
+            288285,
+            288916,
+            290811,
+            291442,
+            292232, // Ending
+            293337,
+            296811,
+            297127,
+            299653,
+            300285,
+            300600,
+            300916,
+            301863,
+            310706
+
         };
     #endregion        
         particleManager.DarkyRingHit(RingPool, RingTimings);
@@ -196,12 +270,21 @@ public class ParticleSection : Section
         List<intRange> hitlightTimes = new List<intRange> {
             new intRange(10074, 10390),
             new intRange(17969, 28074),
-
             new intRange(122811, 124074),
             new intRange(126600, 129127),
             new intRange(137969, 148074), // after credits
             new intRange(203653, 204916), // fast kiai 2
-            new intRange(207442, 209969)
+            new intRange(207442, 209969),
+            new intRange(218811, 220074), // Guitar Solo
+            new intRange(233969, 235232), // After Bridge
+            new intRange(239653, 240285),
+            new intRange(244074, 245337),
+            new intRange(284495, 285758), // Kiai 3
+            new intRange(289548, 290811),
+            new intRange(292232, 293337), // Ending
+            new intRange(308574, 310706)
+
+
         };
 
         particleManager.Hitlight(HitLightPool, hitlightTimes);
@@ -301,6 +384,63 @@ public class ParticleSection : Section
          new ParticleParamaters {
              startTime = 169548,
              endTime = 209969,
+             direction = ParticleDirection.Bottom,
+             Positions = new Vector2Range(
+                 new Vector2(-110, 100), // Top Left
+                 new Vector2(780, 500)   // Bottom Right
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074, 1) * 1.5,
+             particleAmmount = 16,
+             randomX = false,
+             randomY = true,
+             rotation = new Vector2(0,360),
+             randomRotation = true
+         });
+
+         // Furious Sunset Bridge
+         particleManager.CustomParticles(foreGroundFeathers,
+         new ParticleParamaters {
+             startTime = 220074,
+             endTime = 230179,
+             direction = ParticleDirection.Bottom,
+             Positions = new Vector2Range(
+                 new Vector2(-110, 100), // Top Left
+                 new Vector2(780, 500)   // Bottom Right
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074, 1) * 2.5,
+             particleAmmount = 16,
+             randomX = false,
+             randomY = true,
+             rotation = new Vector2(0,360),
+             randomRotation = true
+         });
+
+         // After Bridge
+         particleManager.CustomParticles(foreGroundFeathers,
+         new ParticleParamaters {
+             startTime = 230179,
+             endTime = 247863,
+             direction = ParticleDirection.Bottom,
+             Positions = new Vector2Range(
+                 new Vector2(-110, 100), // Top Left
+                 new Vector2(780, 500)   // Bottom Right
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074, 1) * 3,
+             particleAmmount = 16,
+             randomX = false,
+             randomY = true,
+             rotation = new Vector2(0,360),
+             randomRotation = true
+         });
+
+         // Kiai 3
+         particleManager.CustomParticles(foreGroundFeathers,
+         new ParticleParamaters {
+             startTime = 250390,
+             endTime = 290811,
              direction = ParticleDirection.Bottom,
              Positions = new Vector2Range(
                  new Vector2(-110, 100), // Top Left

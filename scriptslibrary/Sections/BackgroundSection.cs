@@ -53,5 +53,18 @@ public class BackgroundSection : Section
         // Guitar Solo //
         sunsetBG.Fade(209969, 0.8);
         sunsetBG.Fade(230179, 0);
+
+        // After Guitar Solo //
+        normalBG.Fade(230179, 0.8);
+        normalBG.Fade(247863, 0.5);
+        normalBG.Fade(250390, 0);
+
+        // Kiai 3 //
+        warBG.Fade(250390, 0.8);
+        warBG.Fade(290811, 0);
+
+        // Last Section //
+        sunsetBG.Fade(293337, 0.8);
+        sunsetBG.Fade(310706, 0);
     }
 }

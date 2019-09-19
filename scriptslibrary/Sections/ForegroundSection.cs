@@ -1,6 +1,7 @@
 using StorybrewScripts;
 using OpenTK.Graphics;
 using StorybrewCommon.Storyboarding;
+using OpenTK;
 
 public class ForegroundSection : Section
 {
@@ -24,6 +25,12 @@ public class ForegroundSection : Section
         manager.LetterboxScale(OsbEasing.InOutCubic, 144048, 144284, 80, 150);
         manager.LetterboxScale(OsbEasing.InOutElastic, 146416, 146811, 150, 0);
 
+        // Ending
+        manager.LetterboxScale(OsbEasing.InOutCubic, 305811, 305969, 0, 80);
+        manager.LetterboxFade(305811, 1);
+        manager.LetterboxFade(310706, 0);
+        manager.LetterboxScale(OsbEasing.InOutCubic, 310548, 310706, 80, 240);
+        
         // Vignettes
         manager.vigenetteFade(284, 0.8);
         manager.vigenetteFade(10074, 10390, 0.8, 0);
@@ -35,6 +42,11 @@ public class ForegroundSection : Section
         // Flares //
         var sunsetFlare = manager.FlareSprite("sb/sunsetFlare.png");
         var warFlare = manager.FlareSprite("sb/warFlare.png");
+
+        sunsetFlare.Move(0, new Vector2(320,0));
+        sunsetFlare.Fade(220074, .6);
+        sunsetFlare.Fade(230179,0);
+        sunsetFlare.Additive(0,314495);
 
 
         

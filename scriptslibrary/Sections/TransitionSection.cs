@@ -59,6 +59,25 @@ public class TransitionSection : Section
         (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
         (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
 
+        // Kiai 2 //
+        // 149337 //
+        bgFlash.Fade(149337, 149574, 0.7, 0);
+        bgFlash.Scale(OsbEasing.OutExpo,149337, 149574, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
+
+        // 164495
+        bgFlash.Fade(164495, 164732, 0.7, 0);
+        bgFlash.Scale(OsbEasing.OutExpo,164495, 164732, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
+
+        // Fast Kiai 2 //
+        // 169548
+        bgWarFlash.Fade(169548, 169784, 0.7, 0);
+        bgWarFlash.Scale(OsbEasing.OutCubic, 169548, 169784, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
 
         // 209969
         bgSunsetFlash.Fade(209969, 210206, 0.7, 0);
@@ -69,6 +88,39 @@ public class TransitionSection : Section
         // 220074
         bgSunsetFlash.Fade(220074, 220311, 0.7, 0);
         bgSunsetFlash.Scale(220074, 220311, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
+
+        // After Guitar Solo //
+        // 230179
+        bgFlash.Fade(230179, 230416, 0.7, 0);
+        bgFlash.Scale(OsbEasing.OutExpo,230179, 230416, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
+
+        // 247863
+        bgFlash.Fade(247863, 248100, 0.7, 0);
+        bgFlash.Scale(OsbEasing.OutExpo,247863, 248100, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
+
+
+        // Fast Kiai 2
+        // 250390
+        bgWarFlash.Fade(250390, 250627, 0.7, 0);
+        bgWarFlash.Scale(OsbEasing.OutCubic, 250390, 250627, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
+
+        // 290811
+        bgWarFlash.Fade(290811, 291048, 0.7, 0);
+        bgWarFlash.Scale(OsbEasing.OutCubic, 290811, 291048, 
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
+        (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
+
+        // 293337
+        bgSunsetFlash.Fade(293337, 293574, 0.7, 0);
+        bgSunsetFlash.Scale(293337, 293574, 
         (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width),
         (854.0f / MainStoryboard.Instance.GetMapsetBitmap(MainStoryboard.Instance.Beatmap.BackgroundPath).Width) * 1.25);
     }

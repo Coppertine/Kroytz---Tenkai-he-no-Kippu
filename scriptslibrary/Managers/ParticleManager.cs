@@ -236,11 +236,11 @@ public class ParticleManager : Manager
                     if(InTime((int)hitobject.StartTime, range.from, range.to, 5) ||
                        InTime((int)hitobject.EndTime, range.from, range.to, 5))
                     {
-                        var sprite = pool.Get(hitobject.StartTime - 100, hitobject.EndTime + 200);
-                        sprite.Color(hitobject.StartTime - 100, hitobject.Color);
-                        sprite.Fade(hitobject.StartTime - 100, hitobject.EndTime + 200, 1, 0);
-                        sprite.Scale(hitobject.StartTime - 100, hitobject.StartTime, 0, 0.25);
-                        sprite.Move(hitobject.StartTime - 100, hitobject.Position);
+                        var sprite = pool.Get(hitobject.StartTime - 350, hitobject.EndTime + 200);
+                        sprite.Color(hitobject.StartTime - 350, hitobject.Color);
+                        sprite.Fade(hitobject.StartTime - 350, hitobject.EndTime + 200, 1, 0);
+                        sprite.Scale(hitobject.StartTime - 350, hitobject.StartTime, 0, 0.25);
+                        sprite.Move(hitobject.StartTime - 350, hitobject.Position);
                         if(hitobject is OsuSlider)
                         {
                             

@@ -295,20 +295,20 @@ public class ParticleSection : Section
         //     OsbOrigin.Centre);
        // particleManager.CustomParticle(dustParticles, )
 
-       var foreGroundFeathers = particleManager.MovingParticles(
+       var orbParticles = particleManager.MovingParticles(
            Layers.Foreground,
-           "sb/p.png",
+           "sb/dot.png",
            OsbOrigin.Centre
        );
     // First verse
-        particleManager.CustomParticles(foreGroundFeathers,
+        particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
              startTime = 28074,
              endTime = 47969,
-             direction = ParticleDirection.Bottom,
+             direction = ParticleDirection.Top,
              Positions = new Vector2Range(
-                 new Vector2(-110, -50), // Top Left
-                 new Vector2(780, 500)   // Bottom Right
+                 new Vector2(780, 400),   // Bottom Right
+                 new Vector2(-110, -50) // Top Left                 
              ),
              easing = OsbEasing.None,
              duration = GetBeatDuration(28074,1) * 4,
@@ -320,130 +320,130 @@ public class ParticleSection : Section
          });
 
          // 68495 (Sloish Section to Kiai 1)
-         particleManager.CustomParticles(foreGroundFeathers,
+         particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
              startTime = 68495,
              endTime = 83653,
-             direction = ParticleDirection.Bottom,
+             direction = ParticleDirection.Top,
              Positions = new Vector2Range(
-                 new Vector2(-110, 100), // Top Left
-                 new Vector2(780, 500)   // Bottom Right
+                 new Vector2(780, 400),   // Bottom Right
+                 new Vector2(-110, -50) // Top Left            
              ),
              easing = OsbEasing.None,
              duration = GetBeatDuration(28074, 1) * 3,
              particleAmmount = 16,
-             randomX = false,
-             randomY = true,
+              randomX = true,
+             randomY = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
 
          // 88706 (Fast Kiai 1)
-        particleManager.CustomParticles(foreGroundFeathers,
+        particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
              startTime = 88706,
              endTime = 129127,
-             direction = ParticleDirection.Bottom,
+             direction = ParticleDirection.Top,
              Positions = new Vector2Range(
-                 new Vector2(-110, 100), // Top Left
-                 new Vector2(780, 500)   // Bottom Right
+                 new Vector2(780, 400),   // Bottom Right
+                 new Vector2(-110, -50) // Top Left            
              ),
              easing = OsbEasing.None,
              duration = GetBeatDuration(28074, 1) * 1.5,
              particleAmmount = 16,
-             randomX = false,
-             randomY = true,
+             randomX = true,
+             randomY = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
 
 
          // 149337 (Slowish section to kiai 2)
-         particleManager.CustomParticles(foreGroundFeathers,
+         particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
              startTime = 149337,
              endTime = 164495,
              direction = ParticleDirection.Bottom,
              Positions = new Vector2Range(
-                 new Vector2(-110, 100), // Top Left
-                 new Vector2(780, 500)   // Bottom Right
+                 new Vector2(780, 400),   // Bottom Right
+                 new Vector2(-110, -50) // Top Left            
              ),
              easing = OsbEasing.None,
              duration = GetBeatDuration(28074, 1) * 3,
              particleAmmount = 16,
-             randomX = false,
-             randomY = true,
+             randomX = true,
+             randomY = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
 
 
          // (Fast kiai 2)
-         particleManager.CustomParticles(foreGroundFeathers,
+         particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
              startTime = 169548,
              endTime = 209969,
              direction = ParticleDirection.Bottom,
              Positions = new Vector2Range(
-                 new Vector2(-110, 100), // Top Left
-                 new Vector2(780, 500)   // Bottom Right
+                 new Vector2(780, 400),   // Bottom Right
+                 new Vector2(-110, -50) // Top Left            
              ),
              easing = OsbEasing.None,
              duration = GetBeatDuration(28074, 1) * 1.5,
              particleAmmount = 16,
-             randomX = false,
-             randomY = true,
+             randomX = true,
+             randomY = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
 
          // Furious Sunset Bridge
-         particleManager.CustomParticles(foreGroundFeathers,
+         particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
              startTime = 220074,
              endTime = 230179,
              direction = ParticleDirection.Bottom,
              Positions = new Vector2Range(
-                 new Vector2(-110, 100), // Top Left
-                 new Vector2(780, 500)   // Bottom Right
+                 new Vector2(780, 400),   // Bottom Right
+                 new Vector2(-110, -50) // Top Left            
              ),
              easing = OsbEasing.None,
              duration = GetBeatDuration(28074, 1) * 2.5,
              particleAmmount = 16,
-             randomX = false,
-             randomY = true,
+              randomX = true,
+             randomY = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
 
          // After Bridge
-         particleManager.CustomParticles(foreGroundFeathers,
+         particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
              startTime = 230179,
              endTime = 247863,
              direction = ParticleDirection.Bottom,
              Positions = new Vector2Range(
-                 new Vector2(-110, 100), // Top Left
-                 new Vector2(780, 500)   // Bottom Right
+                 new Vector2(780, 400),   // Bottom Right
+                 new Vector2(-110, -50) // Top Left            
              ),
              easing = OsbEasing.None,
              duration = GetBeatDuration(28074, 1) * 3,
              particleAmmount = 16,
-             randomX = false,
-             randomY = true,
+             randomX = true,
+             randomY = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
 
          // Kiai 3
-         particleManager.CustomParticles(foreGroundFeathers,
+         particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
              startTime = 250390,
              endTime = 290811,
              direction = ParticleDirection.Bottom,
              Positions = new Vector2Range(
-                 new Vector2(-110, 100), // Top Left
-                 new Vector2(780, 500)   // Bottom Right
+                 new Vector2(780, 400),   // Bottom Right
+                 new Vector2(-110, -50) // Top Left
              ),
              easing = OsbEasing.None,
              duration = GetBeatDuration(28074, 1) * 1.5,

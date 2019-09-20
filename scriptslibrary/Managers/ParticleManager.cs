@@ -278,7 +278,7 @@ public class ParticleManager : Manager
                     {
                         for (int i = 0; i < Random(particleAmmount.from, particleAmmount.to); i++)
                         {
-                            var sprite = pool.Get(hitobject.StartTime - 100, hitobject.StartTime + duration * 2);
+                            var sprite = pool.Get(hitobject.StartTime - 100, hitobject.StartTime + duration * 1.5);
                             var angle = Random(0, Math.PI*2);
                             var radius = Random(50, 200);
                             var position = new Vector2(
@@ -288,7 +288,7 @@ public class ParticleManager : Manager
 
                             
                             sprite.Move(OsbEasing.OutExpo, hitobject.StartTime, hitobject.StartTime + duration, hitobject.Position, position);
-                            sprite.Move(OsbEasing.OutExpo , hitobject.StartTime + duration, hitobject.StartTime + duration * 2, position, CentreLocation);
+                            sprite.Move(OsbEasing.OutExpo , hitobject.StartTime + duration, hitobject.StartTime + duration * 1.5, position, CentreLocation);
                             sprite.Fade(hitobject.StartTime, 1);
                             sprite.Fade(range.to, 0) ;
                             

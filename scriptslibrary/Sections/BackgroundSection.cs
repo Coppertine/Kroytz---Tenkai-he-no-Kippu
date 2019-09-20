@@ -9,7 +9,7 @@ public class BackgroundSection : Section
         // Set up Backgrounds //
         var normalBG = backgroundManager.GetBackgroundSprite(BackgroundType.Normal);
         var blurBG = backgroundManager.GetBackgroundSprite(BackgroundType.Blur);
-        var warBG = backgroundManager.GetBackgroundSprite(BackgroundType.War);
+        // var normalBG = backgroundManager.GetBackgroundSprite(BackgroundType.War);
         var sunsetBG = backgroundManager.GetBackgroundSprite(BackgroundType.Sunset);
 
         //  Intro  //
@@ -33,8 +33,8 @@ public class BackgroundSection : Section
         normalBG.Fade(88706, 0);
 
         // Fast Kiai 1 //
-        warBG.Fade(88706, 0.8);
-        warBG.Fade(129127, 129206, 0.8, 0);
+        normalBG.Fade(88706, 0.8);
+        normalBG.Fade(129127, 129206, 0.8, 0);
 
         // Credits //
         blurBG.Fade(129127, 129206, 0, 0.8);
@@ -47,8 +47,8 @@ public class BackgroundSection : Section
         normalBG.Fade(169548, 0);
 
         // Fast Second Kiai //
-        warBG.Fade(169548, 0.8);
-        warBG.Fade(209969, 0);
+        normalBG.Fade(169548, 0.8);
+        normalBG.Fade(209969, 0);
 
         // Guitar Solo //
         sunsetBG.Fade(209969, 0.8);
@@ -60,8 +60,8 @@ public class BackgroundSection : Section
         normalBG.Fade(250390, 0);
 
         // Kiai 3 //
-        warBG.Fade(250390, 0.8);
-        warBG.Fade(290811, 0);
+        normalBG.Fade(250390, 0.8);
+        normalBG.Fade(290811, 0);
 
         // Last Section //
         sunsetBG.Fade(293337, 0.8);

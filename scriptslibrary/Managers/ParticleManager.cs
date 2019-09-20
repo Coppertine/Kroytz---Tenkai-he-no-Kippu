@@ -109,14 +109,16 @@ public class ParticleManager : Manager
                 var endX = paramaters.randomX ?
                     Random(paramaters.Positions.from.X, paramaters.Positions.to.X)
                         : paramaters.Positions.to.X;
-                var endY = paramaters.randomY ?
-                    Random(paramaters.Positions.from.Y, paramaters.Positions.to.Y)
+                var endY = paramaters.sameYEnd ?
+                    startY 
+                    : paramaters.randomYEnd ?
+                        Random(paramaters.Positions.from.Y, paramaters.Positions.to.Y)
                         : paramaters.Positions.to.Y;
 
                 sprite.Move(paramaters.easing, 
                     time, particleEndTime, 
                     startX, startY, endX, endY);
-                sprite.Fade(time, 1);
+                sprite.Fade(time, paramaters.fade);
                 sprite.Fade(particleEndTime, 0);
 
                 if ((bool)paramaters.randomRotation == true)

@@ -288,11 +288,19 @@ public class ParticleManager : Manager
                                 hitobject.Position.Y + (float)Math.Sin(angle) * radius
                             );
 
-                            
-                            sprite.Move(OsbEasing.OutExpo, hitobject.StartTime, hitobject.StartTime + duration, hitobject.Position, position);
-                            sprite.Move(OsbEasing.OutExpo , hitobject.StartTime + duration, hitobject.StartTime + duration * 1.5, position, CentreLocation);
                             sprite.Fade(hitobject.StartTime, 1);
-                            sprite.Fade(range.to, 0) ;
+                            if((hitobject.StartTime + duration * 1.5 ) > range.to) 
+                            {   
+                                sprite.Move(OsbEasing.OutExpo, hitobject.StartTime, hitobject.StartTime + duration / 2, hitobject.Position, position);
+                                sprite.Move(OsbEasing.None , hitobject.StartTime + duration/ 2, range.to, position, CentreLocation);
+                            } 
+                                else 
+                            {
+                                sprite.Move(OsbEasing.OutExpo, hitobject.StartTime, hitobject.StartTime + duration, hitobject.Position, position);
+                                sprite.Move(OsbEasing.None,
+                                 hitobject.StartTime + duration, hitobject.StartTime + duration * 1.5, position, CentreLocation);
+                            }
+                            sprite.Fade(range.to, 0);
                             
                         }
                     }

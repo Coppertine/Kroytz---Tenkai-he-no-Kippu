@@ -4,7 +4,7 @@ Script: "MainStoryboard"
 Config:
   Refresh:
     Type: "System.Boolean"
-    Value: "True"
+    Value: "False"
   CopySprites:
     Type: "System.Boolean"
     Value: "True"

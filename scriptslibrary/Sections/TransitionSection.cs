@@ -11,7 +11,7 @@ public class TransitionSection : Section
 
             
         // General Flashes //
-        flashes();
+       // flashes();
         
     }
 

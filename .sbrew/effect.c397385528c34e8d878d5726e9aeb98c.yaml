@@ -33,8 +33,3 @@ Layers:
     OsbLayer: Overlay
     DiffSpecific: No
     Visible: Yes
-  4916152eee5a4c3ba82b7d48ef0d8cca:
-    Name: "OverlayHitobject"
-    OsbLayer: Overlay
-    DiffSpecific: No
-    Visible: Yes

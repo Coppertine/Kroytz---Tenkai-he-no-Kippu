@@ -5,7 +5,7 @@ public class CreditSection : Section
     {
         var creditManager = GetManager<CreditManager>();
 
-        creditManager.SetupFont();
-        creditManager.GenerateCollab();
+        //creditManager.SetupFont();
+        //creditManager.GenerateCollab();
     }
 }

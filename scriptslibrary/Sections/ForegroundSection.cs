@@ -48,6 +48,11 @@ public class ForegroundSection : Section
         sunsetFlare.Fade(230179,0);
         sunsetFlare.Additive(0,314495);
 
+        warFlare.Additive(0,314495);
+        warFlare.Move(0, new Vector2(320,0));
+        warFlare.Fade(88706, .6);
+        warFlare.Fade(129127, 0);
+
 
         
         

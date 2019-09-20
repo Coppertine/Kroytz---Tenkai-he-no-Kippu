@@ -42,6 +42,7 @@ public class ForegroundSection : Section
         // Flares //
         var sunsetFlare = manager.FlareSprite("sb/sunsetFlare.png");
         var warFlare = manager.FlareSprite("sb/warFlare.png");
+        var regularFlare = manager.FlareSprite("sb/flare.png");
 
         sunsetFlare.Move(0, new Vector2(320,0));
         sunsetFlare.Fade(220074, .6);
@@ -52,6 +53,12 @@ public class ForegroundSection : Section
         warFlare.Move(0, new Vector2(320,0));
         warFlare.Fade(88706, .6);
         warFlare.Fade(129127, 0);
+
+        regularFlare.Additive(0,314495);
+        regularFlare.Move(0, new Vector2(320,0));
+        regularFlare.Fade(68495, 0.4);
+        regularFlare.Fade(129127, 0);
+
 
 
         

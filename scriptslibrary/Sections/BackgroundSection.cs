@@ -46,10 +46,10 @@ public class BackgroundSection : Section
 
         // Fast Second Kiai //
         normalBG.Fade(169548, 0.8);
-        normalBG.Fade(209969, 0);
+        normalBG.Fade(209337,209969, 0.8, 0);
 
         // Guitar Solo //
-        sunsetBG.Fade(209969, 0.8);
+        sunsetBG.Fade(209337,209969,0, 0.8);
         sunsetBG.Fade(230179, 0);
 
         // After Guitar Solo //

@@ -300,6 +300,11 @@ public class ParticleSection : Section
            "sb/dot.png",
            OsbOrigin.Centre
        );
+       var cloudParticles = particleManager.MovingParticles(
+           Layers.Foreground,
+           "sb/p/cloud.png",
+           OsbOrigin.Centre
+       );
     // First verse
         particleManager.CustomParticles(orbParticles,
          new ParticleParamaters {
@@ -315,8 +320,32 @@ public class ParticleSection : Section
              particleAmmount = 16,
              randomX = true,
              randomY = false,
+             randomYEnd = false,
+             sameYEnd = false,
              rotation = new Vector2(1,360),
              randomRotation = true
+         });
+
+            // Clouds
+        particleManager.CustomParticles(cloudParticles,
+         new ParticleParamaters {
+             startTime = 28074,
+             endTime = 47969,
+             direction = ParticleDirection.Right,
+             Positions = new Vector2Range(
+                 new Vector2(-220, -50), // Top Left    
+                 new Vector2(850, 300)   // Bottom Right                              
+             ),
+             easing = OsbEasing.None,
+             duration = GetBeatDuration(28074,1) * 5,
+             particleAmmount = 4,
+             randomX = false,
+             randomY = true,
+             sameYEnd = true,
+             randomYEnd = false,
+             fade = 0.3,
+             //rotation = new Vector2(1,360),
+             //randomRotation = true
          });
 
          // 68495 (Sloish Section to Kiai 1)
@@ -334,6 +363,8 @@ public class ParticleSection : Section
              particleAmmount = 16,
               randomX = true,
              randomY = false,
+             randomYEnd = false,
+             sameYEnd = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
@@ -353,6 +384,8 @@ public class ParticleSection : Section
              particleAmmount = 16,
              randomX = true,
              randomY = false,
+             randomYEnd = false,
+             sameYEnd = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
@@ -373,6 +406,8 @@ public class ParticleSection : Section
              particleAmmount = 16,
              randomX = true,
              randomY = false,
+             randomYEnd = false,
+             sameYEnd = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
@@ -393,6 +428,8 @@ public class ParticleSection : Section
              particleAmmount = 16,
              randomX = true,
              randomY = false,
+             randomYEnd = false,
+             sameYEnd = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
@@ -412,6 +449,8 @@ public class ParticleSection : Section
              particleAmmount = 16,
               randomX = true,
              randomY = false,
+             randomYEnd = false,
+             sameYEnd = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
@@ -431,6 +470,8 @@ public class ParticleSection : Section
              particleAmmount = 16,
              randomX = true,
              randomY = false,
+             randomYEnd = false,
+             sameYEnd = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });
@@ -450,6 +491,8 @@ public class ParticleSection : Section
              particleAmmount = 16,
              randomX = false,
              randomY = true,
+             randomYEnd = false,
+             sameYEnd = false,
              rotation = new Vector2(0,360),
              randomRotation = true
          });

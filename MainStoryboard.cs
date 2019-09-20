@@ -42,6 +42,7 @@ namespace StorybrewScripts
             Locator.Register<BackgroundManager>(new BackgroundManager());
             Locator.Register<ExampleManager>(new ExampleManager());
             Locator.Register<ParticleManager>(new ParticleManager());
+            Locator.Register<ParticleMaskSection>(new ParticleMaskSection());
             Locator.Register<CreditManager>(new CreditManager());
             Locator.Register<ForegroundManager>(new ForegroundManager());
             Locator.Register<LyricManager>(new LyricManager());
@@ -52,8 +53,8 @@ namespace StorybrewScripts
             Section[] instanciatedSections =
             {
                 new BackgroundSection(),
-                new ExampleSection(),
                 new ParticleSection(),
+                new ParticleMaskSection(),
                 new CreditSection(),                
                 new OsbSection(),
                 new ForegroundSection(),

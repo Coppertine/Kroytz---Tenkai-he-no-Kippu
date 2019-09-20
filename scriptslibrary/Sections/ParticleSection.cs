@@ -297,7 +297,7 @@ public class ParticleSection : Section
 
        var foreGroundFeathers = particleManager.MovingParticles(
            Layers.Foreground,
-           "sb/feather.png",
+           "sb/p.png",
            OsbOrigin.Centre
        );
     // First verse

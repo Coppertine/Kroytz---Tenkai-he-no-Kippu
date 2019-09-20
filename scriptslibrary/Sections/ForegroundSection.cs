@@ -37,7 +37,8 @@ public class ForegroundSection : Section
         manager.vigenetteFade(50811, 0.8);
         manager.vigenetteFade(58390, 58627, 0.8, 0);
         manager.vigenetteFade(209258, 209969,0, 0.6);
-        manager.vigenetteFade(220074, 220271, 0.6, 0);
+        manager.vigenetteFade(220074, 0.8);
+        manager.vigenetteFade(219758, 220074, 0.8, 0);
 
         // Flares //
         var sunsetFlare = manager.FlareSprite("sb/sunsetFlare.png");
@@ -58,6 +59,10 @@ public class ForegroundSection : Section
         regularFlare.Move(0, new Vector2(320,0));
         regularFlare.Fade(68495, 0.4);
         regularFlare.Fade(129127, 0);
+
+        //Kiai 2
+        regularFlare.Fade(169390, 169548, 0, 0.6);
+        regularFlare.Fade(219758,220074, 0.6, 0);
 
 
 

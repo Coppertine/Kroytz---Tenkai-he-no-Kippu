@@ -259,6 +259,45 @@ public class ParticleManager : Manager
             }
         }
     }
+
+    /// <summary>
+    /// Creates litle particles that dispirse from the hitobject and ease into the centre location
+    /// </summary>
+    public void PPHitLight(OsbSpritePool pool, List<intRange> ranges, intRange particleAmmount, Vector2 CentreLocation,
+                            OsbEasing easing = OsbEasing.None, int duration = 1000)
+    {
+        // Only effect hti object start positions.
+        using (pool) 
+        {
+            foreach(var hitobject in MainStoryboard.Instance.Beatmap.HitObjects)
+            {
+                foreach(var range in ranges)
+                {
+                    if(InTime((int)hitobject.StartTime, range.from, range.to, 5) ||
+                       InTime((int)hitobject.EndTime, range.from, range.to, 5))
+                    {
+                        for (int i = 0; i < Random(particleAmmount.from, particleAmmount.to); i++)
+                        {
+                            var sprite = pool.Get(hitobject.StartTime - 100, range.to);
+                            var angle = Random(0, Math.PI*2);
+                            var radius = Random(50, 200);
+                            var position = new Vector2(
+                                hitobject.Position.X + (float)Math.Cos(angle) * radius,
+                                hitobject.Position.Y + (float)Math.Sin(angle) * radius
+                            );
+
+                            
+                            sprite.Move(OsbEasing.OutExpo, hitobject.StartTime, hitobject.StartTime + duration, hitobject.Position, position);
+                            sprite.Move(OsbEasing.InExpo, hitobject.StartTime + duration, range.to, position, CentreLocation);
+                            sprite.Fade(hitobject.StartTime, 1);
+                            sprite.Fade(range.to, 0) ;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
     #endregion
 
 }

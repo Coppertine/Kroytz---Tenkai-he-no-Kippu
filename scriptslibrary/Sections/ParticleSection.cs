@@ -266,7 +266,7 @@ public class ParticleSection : Section
 #endregion      
     
 #region Hitlights
-        var HitLightPool = particleManager.hitlightpool(Layers.Hitobject, "sb/highlight.png");
+        var HitLightPool = particleManager.hitlightpool(Layers.Hitobject, "sb/dot.png");
         List<intRange> hitlightTimes = new List<intRange> {
             new intRange(10074, 10390),
             new intRange(17969, 28074),
@@ -286,7 +286,7 @@ public class ParticleSection : Section
 
         };
 
-        particleManager.Hitlight(HitLightPool, hitlightTimes);
+        particleManager.PPHitLight(HitLightPool, hitlightTimes, new intRange(5, 20), new Vector2(320, 0));
 #endregion
 
         // var dustParticles = particleManager.MovingParticles(

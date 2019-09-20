@@ -16,7 +16,7 @@ public class BackgroundSection : Section
         normalBG.Fade(284, 0.8);
         normalBG.Fade(17732, 17969, 0.8, 0);
         blurBG.Fade(17732, 17969, 0, 0.8);
-
+ 
        // Verse 1 //
         blurBG.Fade(28074,0);
         normalBG.Fade(28074, 0.7);
@@ -30,7 +30,6 @@ public class BackgroundSection : Section
         //normalBG.Fade(66641, 0);
         normalBG.Fade(68495, 0.8);
         normalBG.Fade(83653, 0.55);
-        normalBG.Fade(88706, 0);
 
         // Fast Kiai 1 //
         normalBG.Fade(88706, 0.8);
@@ -44,7 +43,6 @@ public class BackgroundSection : Section
         // Second Kiai //
         normalBG.Fade(149337, 0.8);
         normalBG.Fade(164495, 0.5);
-        normalBG.Fade(169548, 0);
 
         // Fast Second Kiai //
         normalBG.Fade(169548, 0.8);
@@ -57,7 +55,6 @@ public class BackgroundSection : Section
         // After Guitar Solo //
         normalBG.Fade(230179, 0.8);
         normalBG.Fade(247863, 0.5);
-        normalBG.Fade(250390, 0);
 
         // Kiai 3 //
         normalBG.Fade(250390, 0.8);

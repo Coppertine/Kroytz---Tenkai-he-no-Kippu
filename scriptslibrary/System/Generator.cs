@@ -156,13 +156,15 @@ public abstract class Generator
 
         public bool randomX {get; set;}
         public bool randomY {get; set;}
+        public bool sameYEnd {get; set;}
+        public bool randomYEnd {get;set;}
 
         public Vector2 scale {get; set;}   
         public bool randomScale {get; set;}
 
         public Vector2 rotation {get; set;}
         public bool randomRotation {get; set;}
-
+        public double fade {get; set;}
         public ParticleParamaters(
             double start, 
             double end,
@@ -170,8 +172,10 @@ public abstract class Generator
             Vector2Range pos, OsbEasing ease, 
             double dur, int partAmmount,
             bool randX = false, bool randY = true,
+            bool sameYEnd = false, bool randomYEnd = false,
             Vector2? scale = null, bool randomScale = false,
-            Vector2? rotation = null, bool randomRotation = false
+            Vector2? rotation = null, bool randomRotation = false,
+            double fade = 1
             )
         {
             this.direction = particleDir;
@@ -187,6 +191,9 @@ public abstract class Generator
             this.rotation = ((Vector2)rotation).Equals(null) ? (Vector2)rotation : new Vector2(0,0); 
             this.randomRotation = randomRotation;
             this.randomScale = randomScale;
+            this.sameYEnd = sameYEnd;
+            this.fade = fade;
+            this.randomYEnd = randomYEnd;
 
         }
 

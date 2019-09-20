@@ -280,7 +280,7 @@ public class ParticleManager : Manager
                     {
                         for (int i = 0; i < Random(particleAmmount.from, particleAmmount.to); i++)
                         {
-                            var sprite = pool.Get(hitobject.StartTime - 100, hitobject.StartTime + duration * 1.5);
+                            
                             var angle = Random(0, Math.PI*2);
                             var radius = Random(50, 200);
                             var position = new Vector2(
@@ -288,19 +288,26 @@ public class ParticleManager : Manager
                                 hitobject.Position.Y + (float)Math.Sin(angle) * radius
                             );
 
-                            sprite.Fade(hitobject.StartTime, 1);
+                            
                             if((hitobject.StartTime + duration * 1.5 ) > range.to) 
                             {   
+                                var sprite = pool.Get(hitobject.StartTime - 100, range.to);
+                                sprite.Fade(hitobject.StartTime, 1);
                                 sprite.Move(OsbEasing.OutExpo, hitobject.StartTime, hitobject.StartTime + duration / 2, hitobject.Position, position);
                                 sprite.Move(OsbEasing.None , hitobject.StartTime + duration/ 2, range.to, position, CentreLocation);
+                                sprite.Fade(range.to, 0);
                             } 
                                 else 
                             {
+                                var sprite = pool.Get(hitobject.StartTime - 100, hitobject.StartTime + duration * 1.5);
+                                sprite.Fade(hitobject.StartTime, 1);
                                 sprite.Move(OsbEasing.OutExpo, hitobject.StartTime, hitobject.StartTime + duration, hitobject.Position, position);
                                 sprite.Move(OsbEasing.None,
                                  hitobject.StartTime + duration, hitobject.StartTime + duration * 1.5, position, CentreLocation);
+                                 sprite.Fade(hitobject.StartTime + duration * 1.5, 0);
                             }
-                            sprite.Fade(range.to, 0);
+                            
+                            
                             
                         }
                     }

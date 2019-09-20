@@ -271,13 +271,13 @@ public class ParticleSection : Section
             new intRange(10074, 10390),
             new intRange(17969, 28074),
             new intRange(122811, 124074),
-            new intRange(126600, 129127),
+            new intRange(126600, 129206),
             new intRange(137969, 148074), // after credits
             new intRange(203653, 204916), // fast kiai 2
             new intRange(207442, 209969),
             new intRange(218811, 220074), // Guitar Solo
             new intRange(233969, 235232), // After Bridge
-            new intRange(239653, 240285),
+            new intRange(237758, 238942),
             new intRange(244074, 245337),
             new intRange(284495, 285758), // Kiai 3
             new intRange(289548, 290811),

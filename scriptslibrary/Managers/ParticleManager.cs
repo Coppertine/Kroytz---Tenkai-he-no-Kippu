@@ -149,7 +149,7 @@ public class ParticleManager : Manager
     
     public OsbSpritePool DarkyRing(Layers layers)
     {
-        return new OsbSpritePool(GetLayer(layers), "sb/ring2.png", OsbOrigin.Centre, (sprite, startTime, endTime) =>
+        return new OsbSpritePool(GetLayer(layers), "sb/ring.png", OsbOrigin.Centre, (sprite, startTime, endTime) =>
         {});
     }
 

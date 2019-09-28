@@ -42,7 +42,7 @@ namespace StorybrewScripts
             Locator.Register<BackgroundManager>(new BackgroundManager());
             Locator.Register<ExampleManager>(new ExampleManager());
             Locator.Register<ParticleManager>(new ParticleManager());
-            Locator.Register<ParticleMaskSection>(new ParticleMaskSection());
+            Locator.Register<ParticleMaskManager>(new ParticleMaskManager());
             Locator.Register<CreditManager>(new CreditManager());
             Locator.Register<ForegroundManager>(new ForegroundManager());
             Locator.Register<LyricManager>(new LyricManager());

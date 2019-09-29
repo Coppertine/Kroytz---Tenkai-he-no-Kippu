@@ -14,16 +14,14 @@ public class BackgroundSection : Section
 
         //  Intro  //
         normalBG.Fade(284, 0.8);
-        normalBG.Fade(17732, 17969, 0.8, 0);
-        blurBG.Fade(17732, 17969, 0, 0.8);
- 
+               
        // Verse 1 //
-        blurBG.Fade(28074,0);
+        
         normalBG.Fade(28074, 0.7);
-        normalBG.Fade(48284, 0);
+        normalBG.Fade(48284, 0.4);
 
-        sunsetBG.Fade(50811, 0.8);
-        sunsetBG.Fade(67232, 0);
+        normalBG.Fade(50653, 50811, 0.4, 0.8);
+        normalBG.Fade(67232, 0);
 
         // Kiai 1 //
          //normalBG.Fade(44698, 0.85);

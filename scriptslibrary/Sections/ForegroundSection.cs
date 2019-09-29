@@ -31,7 +31,7 @@ public class ForegroundSection : Section
         // manager.LetterboxFade(310706, 0);
         // manager.LetterboxScale(OsbEasing.InOutCubic, 310548, 310706, 80, 240);
         
-        // Vignettes
+        // Vignettes // 
         manager.vigenetteFade(284, 679,0, 0.8);
         manager.vigenetteFade(10074, 10390, 0.8, 0);
         manager.vigenetteFade(50653, 50811,0, 0.8);
@@ -70,6 +70,10 @@ public class ForegroundSection : Section
 
         sunsetFlare.Fade(47100, 48285, 0, 0.7);
         sunsetFlare.Fade(48285, 48521, 0.7, 0 );
+
+        sunsetFlare.Fade(164100, 164495, 0, 0.95);
+        sunsetFlare.Fade(164495, 164890, 0.95, 0);
+
         sunsetFlare.Fade(169153, 169548, 0, 0.95);
         sunsetFlare.Fade(169548, 170179, 0.95, 0.35);
         // kiai 2 Loop
@@ -95,6 +99,11 @@ public class ForegroundSection : Section
         sunsetFlare.EndGroup();
         sunsetFlare.Fade(290416, 290811, 0.35, 0.95);
         sunsetFlare.Fade(290811, 291048, 0.95, 0);
+        
+
+
+        sunsetFlare.Fade(293337, 310706, 0, 0.95);
+        sunsetFlare.Fade(310706, 0);
         sunsetFlare.Additive(0,314495);
 
         // warFlare.Additive(0,314495);

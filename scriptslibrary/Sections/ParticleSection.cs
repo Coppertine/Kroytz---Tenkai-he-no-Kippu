@@ -306,25 +306,7 @@ public class ParticleSection : Section
            OsbOrigin.Centre
        );
     // First verse
-        particleManager.CustomParticles(orbParticles,
-         new ParticleParamaters {
-             startTime = 28074,
-             endTime = 47969,
-             direction = ParticleDirection.Top,
-             Positions = new Vector2Range(
-                 new Vector2(780, 400),   // Bottom Right
-                 new Vector2(-110, -50) // Top Left                 
-             ),
-             easing = OsbEasing.None,
-             duration = GetBeatDuration(28074,1) * 4,
-             particleAmmount = 16,
-             randomX = true,
-             randomY = false,
-             randomYEnd = false,
-             sameYEnd = false,
-             rotation = new Vector2(1,360),
-             randomRotation = true
-         });
+        
 
             // Clouds
         particleManager.CustomParticles(cloudParticles,
@@ -359,14 +341,15 @@ public class ParticleSection : Section
                  new Vector2(-110, -50) // Top Left            
              ),
              easing = OsbEasing.None,
-             duration = GetBeatDuration(28074, 1) * 3,
+             duration = GetBeatDuration(28074, 1) * 4,
              particleAmmount = 16,
               randomX = true,
              randomY = false,
              randomYEnd = false,
              sameYEnd = false,
-             rotation = new Vector2(0,360),
-             randomRotation = true
+             fade = 1,
+             //rotation = new Vector2(0,360),
+             //randomRotation = true
          });
 
          // 88706 (Fast Kiai 1)
@@ -380,14 +363,15 @@ public class ParticleSection : Section
                  new Vector2(-110, -50) // Top Left            
              ),
              easing = OsbEasing.None,
-             duration = GetBeatDuration(28074, 1) * 1.5,
+             duration = GetBeatDuration(28074, 1) * 3,
              particleAmmount = 16,
              randomX = true,
              randomY = false,
              randomYEnd = false,
              sameYEnd = false,
-             rotation = new Vector2(0,360),
-             randomRotation = true
+              fade = 1,
+             //rotation = new Vector2(0,360),
+             //randomRotation = true
          });
 
 
@@ -408,8 +392,9 @@ public class ParticleSection : Section
              randomY = false,
              randomYEnd = false,
              sameYEnd = false,
-             rotation = new Vector2(0,360),
-             randomRotation = true
+              fade = 1,
+             //rotation = new Vector2(0,360),
+             //randomRotation = true
          });
 
 
@@ -430,8 +415,9 @@ public class ParticleSection : Section
              randomY = false,
              randomYEnd = false,
              sameYEnd = false,
-             rotation = new Vector2(0,360),
-             randomRotation = true
+              fade = 1,
+            // rotation = new Vector2(0,360),
+             //randomRotation = true
          });
 
          // Furious Sunset Bridge
@@ -451,8 +437,9 @@ public class ParticleSection : Section
              randomY = false,
              randomYEnd = false,
              sameYEnd = false,
-             rotation = new Vector2(0,360),
-             randomRotation = true
+              fade = 1,
+            // rotation = new Vector2(0,360),
+            // randomRotation = true
          });
 
          // After Bridge
@@ -472,8 +459,9 @@ public class ParticleSection : Section
              randomY = false,
              randomYEnd = false,
              sameYEnd = false,
-             rotation = new Vector2(0,360),
-             randomRotation = true
+              fade = 1,
+             //rotation = new Vector2(0,360),
+             //randomRotation = true
          });
 
          // Kiai 3
@@ -493,8 +481,9 @@ public class ParticleSection : Section
              randomY = true,
              randomYEnd = false,
              sameYEnd = false,
-             rotation = new Vector2(0,360),
-             randomRotation = true
+              fade = 1,
+             //rotation = new Vector2(0,360),
+             //randomRotation = true
          });
     }
 }

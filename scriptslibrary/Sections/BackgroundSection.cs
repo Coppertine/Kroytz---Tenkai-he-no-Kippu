@@ -21,7 +21,7 @@ public class BackgroundSection : Section
         normalBG.Fade(48284, 0.4);
 
         normalBG.Fade(50653, 50811, 0.4, 0.8);
-        normalBG.Fade(67232, 0);
+        normalBG.Fade(66995, 67232,0.8, 0.5);
 
         // Kiai 1 //
          //normalBG.Fade(44698, 0.85);

@@ -31,12 +31,11 @@ public class BackgroundSection : Section
 
         // Fast Kiai 1 //
         normalBG.Fade(88706, 0.8);
-        normalBG.Fade(129127, 129206, 0.8, 0);
+        
 
         // Credits //
-        blurBG.Fade(129127, 129206, 0, 0.8);
-        blurBG.Fade(147679, 148074,0.8, 0);
-        normalBG.Fade(147679, 148074, 0, 0.4);
+    
+        normalBG.Fade(147679, 148074, 0.8, 0.4);
 
 
         // Second Kiai //

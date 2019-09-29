@@ -50,6 +50,21 @@ public class ForegroundSection : Section
         
         sunsetFlare.Fade(26732, 28074, 0, 0.7);
         sunsetFlare.Fade(28074, 28469, 0.7, 0 );
+        
+        sunsetFlare.Fade(67784, 68495, 0, 0.9);
+        sunsetFlare.Fade(68495, 68732, 0.9, 0);
+        sunsetFlare.Fade(87995, 88706, 0, 0.95);
+        sunsetFlare.Fade(88706, 89337, 0.9, 0.35);
+
+        // kiai 1 Loop
+        sunsetFlare.StartLoopGroup(89337, 7);
+
+        sunsetFlare.Fade(0, GetBeatDuration(0,1) * 8, 0.35, 0.45);
+        sunsetFlare.Fade(GetBeatDuration(0,1) * 8, GetBeatDuration(0,1) * 16, 0.45, 0.35);
+
+        sunsetFlare.EndGroup();
+        sunsetFlare.Fade(128732, 129206, 0.35, 0);
+
         sunsetFlare.Fade(47100, 48285, 0, 0.7);
         sunsetFlare.Fade(48285, 48521, 0.7, 0 );
         sunsetFlare.Fade(220074, .6);

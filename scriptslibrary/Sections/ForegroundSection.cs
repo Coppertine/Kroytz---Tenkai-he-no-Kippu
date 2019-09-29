@@ -78,7 +78,11 @@ public class ForegroundSection : Section
 
         regularFlare.Additive(0,314495);
         regularFlare.Move(0, new Vector2(320,0));
-        regularFlare.Fade(68495, 0.4);
+        // Pre Kiai 1 loop
+        regularFlare.StartLoopGroup(68495, 8);
+        regularFlare.Fade(0, GetBeatDuration(0,1) * 4, 0.4, 0.55);
+        regularFlare.Fade(GetBeatDuration(0,1) * 4, GetBeatDuration(0,1) * 8, 0.55, 0.4);
+        regularFlare.EndGroup();
         regularFlare.Fade(129127, 0);
 
         //Kiai 2

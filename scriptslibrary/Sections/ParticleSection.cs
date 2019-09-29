@@ -286,7 +286,7 @@ public class ParticleSection : Section
 
         };
 
-        particleManager.PPHitLight(HitLightPool, hitlightTimes, new intRange(5, 20), new Vector2(320, 0));
+        particleManager.PPHitLight(HitLightPool, hitlightTimes, new intRange(5, 10), new Vector2(320, 0));
 #endregion
 
         // var dustParticles = particleManager.MovingParticles(

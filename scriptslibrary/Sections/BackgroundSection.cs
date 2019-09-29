@@ -13,7 +13,7 @@ public class BackgroundSection : Section
         var sunsetBG = backgroundManager.GetBackgroundSprite(BackgroundType.Sunset);
 
         //  Intro  //
-        normalBG.Fade(284, 0.8);
+        normalBG.Fade(0, 284,1, 0.8);
                
        // Verse 1 //
         
@@ -27,7 +27,7 @@ public class BackgroundSection : Section
          //normalBG.Fade(44698, 0.85);
         //normalBG.Fade(66641, 0);
         normalBG.Fade(68495, 0.8);
-        normalBG.Fade(83653, 0.55);
+        normalBG.Fade(83416, 83653, 0.8, 0.55);
 
         // Fast Kiai 1 //
         normalBG.Fade(88706, 0.8);
@@ -35,7 +35,8 @@ public class BackgroundSection : Section
 
         // Credits //
         blurBG.Fade(129127, 129206, 0, 0.8);
-        blurBG.Fade(148074,0);
+        blurBG.Fade(147679, 148074,0.8, 0);
+        normalBG.Fade(147679, 148074, 0, 0.4);
 
 
         // Second Kiai //
@@ -56,10 +57,11 @@ public class BackgroundSection : Section
 
         // Kiai 3 //
         normalBG.Fade(250390, 0.8);
-        normalBG.Fade(290811, 0);
+        normalBG.Fade(290811, 291206, 0.8, 0.3);
+        normalBG.Fade( 293100, 293337, 0.3 ,0);
 
         // Last Section //
-        sunsetBG.Fade(293337, 0.8);
+        sunsetBG.Fade(293100, 293337, 0, 0.8);
         sunsetBG.Fade(310706, 0);
     }
 }

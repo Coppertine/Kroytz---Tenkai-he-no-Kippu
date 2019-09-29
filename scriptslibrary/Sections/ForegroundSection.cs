@@ -32,7 +32,7 @@ public class ForegroundSection : Section
         // manager.LetterboxScale(OsbEasing.InOutCubic, 310548, 310706, 80, 240);
         
         // Vignettes
-        manager.vigenetteFade(284, 0.8);
+        manager.vigenetteFade(284, 679,0, 0.8);
         manager.vigenetteFade(10074, 10390, 0.8, 0);
         manager.vigenetteFade(50653, 50811,0, 0.8);
         manager.vigenetteFade(58390, 58627, 0.8, 0);

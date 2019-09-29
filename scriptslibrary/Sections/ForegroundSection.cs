@@ -65,6 +65,9 @@ public class ForegroundSection : Section
         sunsetFlare.EndGroup();
         sunsetFlare.Fade(128732, 129206, 0.35, 0);
 
+        sunsetFlare.Fade(148942, 149337, 0, 0.95);
+        sunsetFlare.Fade(149337, 149732, 0.95, 0);
+
         sunsetFlare.Fade(47100, 48285, 0, 0.7);
         sunsetFlare.Fade(48285, 48521, 0.7, 0 );
         sunsetFlare.Fade(169153, 169548, 0, 0.95);

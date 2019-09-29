@@ -32,7 +32,6 @@ public class BackgroundSection : Section
         // Fast Kiai 1 //
         normalBG.Fade(88706, 0.8);
         
-
         // Credits //
     
         normalBG.Fade(147679, 148074, 0.8, 0.4);

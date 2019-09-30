@@ -56,10 +56,10 @@ public class BackgroundSection : Section
         // Kiai 3 //
         normalBG.Fade(250390, 0.8);
         normalBG.Fade(290811, 291206, 0.8, 0.3);
-        normalBG.Fade( 293100, 293337, 0.3 ,0);
+        normalBG.Fade( 293100, 293337, 0.3 ,0.8);
 
         // Last Section //
-        sunsetBG.Fade(293100, 293337, 0, 0.8);
-        sunsetBG.Fade(310706, 0);
+        
+        normalBG.Fade(310706, 0);
     }
 }

@@ -58,7 +58,7 @@ namespace StorybrewScripts
                 new CreditSection(),                
                 new OsbSection(),
                 new ForegroundSection(),
-                new TransitionSection(),
+                new TransitionSection(), 
                 
             };
         }

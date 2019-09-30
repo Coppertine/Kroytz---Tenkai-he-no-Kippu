@@ -87,10 +87,12 @@ public class ForegroundSection : Section
         sunsetFlare.Fade(229784, 230179, 0.65, 0.95);
         sunsetFlare.Fade(230179, 230416, 0.95, 0);
         
+        sunsetFlare.Fade(247469, 247863, 0, 0.95);
+        sunsetFlare.Fade(247863, 248258,0.95, 0);
 
         sunsetFlare.Fade(249995, 250390, 0, 0.95);
         sunsetFlare.Fade(250390, 251100, 0.95, 0.35);
-        // kiai 2 Loop
+        // kiai 3 Loop
         sunsetFlare.StartLoopGroup(251100, 7);
 
         sunsetFlare.Fade(0, GetBeatDuration(0,1) * 8, 0.35, 0.5);
@@ -118,7 +120,7 @@ public class ForegroundSection : Section
         regularFlare.Fade(0, GetBeatDuration(0,1) * 4, 0.4, 0.55);
         regularFlare.Fade(GetBeatDuration(0,1) * 4, GetBeatDuration(0,1) * 8, 0.55, 0.4);
         regularFlare.EndGroup();
-        regularFlare.Fade(129127, 0);
+        regularFlare.Fade(129127, 129521, 0.4, 0);
 
         //Kiai 2
         regularFlare.Fade(169390, 169548, 0, 0.6);
